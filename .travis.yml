@@ -15,11 +15,5 @@ arch:
   - ppc64le
 language: java
 jdk:
-  - oraclejdk11
   - openjdk11
-# Excluding oraclejdk11 on power as it is not supported.
-jobs:
- exclude:
-  - oraclejdk11
-    arch: ppc64le
 
