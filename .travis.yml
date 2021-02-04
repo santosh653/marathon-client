@@ -5,15 +5,19 @@
 # Travis Job Link     : https://travis-ci.com/github/santosh653/marathon-client
 # Created travis.yml  : No
 # Maintainer          : Santosh Kulkarni <santoshkulkarni70@gmail.com>
-#
 # Script License      : Apache License, Version 2 or later
 #
 # ----------------------------------------------------------------------------
-# oraclejdk7/8 not supported on power hence running the code with latest openjdk11 on both Intel & Power to make it consistent.
+# oraclejdk7/8/11 not supported on power hence excluding them.
+
 arch:
   - amd64
   - ppc64le
 language: java
 jdk:
   - openjdk11
-
+  - oraclejdk11
+jobs:
+ exclude:
+  - jdk: oraclejdk11
+    arch: ppc64le
